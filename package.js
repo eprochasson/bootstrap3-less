@@ -1,5 +1,5 @@
 Package.describe({
-    summary: "Bootstrap 3, with Less files (v3.0.3)."
+    summary: "Bootstrap 3, with Less files (v3.1.1)."
 });
 
 Package.on_use(function (api) {
