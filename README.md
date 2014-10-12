@@ -11,11 +11,9 @@ Bootstrap 3.2.0, with all Less files for easy style customization for Meteor 0.8
 
 ## How to install
 
-1. `npm install -g meteorite` (if not already installed)
-2. `mrt add less`
-3. `mrt add bootstrap3-less`
-4. Create a .less file anywhere in your project to be served to the client and add `@import "/packages/bootstrap3-less/bootstrap.import.less";`
-5. Load the optional Bootstrap theme for a visually enhanced experience by adding `@import "/packages/bootstrap3-less/lib/less/theme.import.less";`
+1. `meteor add simison:bootstrap3-less`
+2. Create a .less file anywhere in your project to be served to the client and add `@import ".meteor/local/build/programs/web.browser/packages/simison_bootstrap3-less/bootstrap.import.less";`
+3. Load the optional Bootstrap theme for a visually enhanced experience by adding `@import ".meteor/local/build/programs/web.browser/packages/simison_bootstrap3-less/lib/less/theme.import.less";`
 
 ## Customized Usage
 
@@ -36,7 +34,7 @@ Moreover you can take advantage of the mixins that bootstrap provides if you put
 Create one `variables.import.less` file which should only contain variables and mixins so you can import it into every file of you project for easy access.
 ```css
 // Defines where the package is
-@bootstrap3-less-root: "/packages/bootstrap3-less";
+@bootstrap3-less-root: ".meteor/local/build/programs/web.browser/packages/simison_bootstrap3-less";
 
 // Import Bootstrap core variables and mixin
 // ---------------------------------------
@@ -49,7 +47,7 @@ Create one `variables.import.less` file which should only contain variables and 
 // ---------------------------------------
 // (Here you can override any variables defined in the default set above)
 
-@icon-font-path: "@{bootstrap3-less-root}/lib/fonts/";
+@icon-font-path: "/packages/simison_bootstrap3-less/lib/fonts/";
 
 ```
 
@@ -58,7 +56,7 @@ To include the rest of Bootstrap, create a `bootstrap.less` file where you `@imp
 @import "variables.import.less";
 
 // Because of the order less handles it's imports this variable needs to be redefined
-@bootstrap3-less-root: "/packages/bootstrap3-less";
+@bootstrap3-less-root: ".meteor/local/build/programs/web.browser/packages/simison_bootstrap3-less";
 
 // Import Bootstrap
 // ---------------------------------------
@@ -115,6 +113,8 @@ To include the rest of Bootstrap, create a `bootstrap.less` file where you `@imp
 
 ## Upgrading
 
+* 3.2.0_1
+    * Fixed compatibility with Meteor 0.9.x / Upgraded version to match shipped bootstrap version
 * 0.3.0
     * Migrated to new Meteor 0.9 package system.
 * 0.2.1
@@ -136,3 +136,4 @@ This package is licensed under the MIT license. See [Bootstrap License](https://
 - [Alan Blount](https://github.com/zeroasterisk/)
 - [Marco Pfeiffer](https://github.com/Nemo64)
 - [Mikael Korpela](https://github.com/simison)
+- [Daniel Schroeder](https://github.com/udondan)
