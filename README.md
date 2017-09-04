@@ -1,6 +1,8 @@
 # Bootstrap 3 with Less
 ## Bootstrap 3 Packaged for Meteor, using Less
 
+__NO LONGER MAINTAINED__
+
 Bootstrap 3.2.0, with all Less files for easy style customization.
 
 ## How to install
